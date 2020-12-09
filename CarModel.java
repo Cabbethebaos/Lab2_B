@@ -17,8 +17,8 @@ public class CarModel extends JComponent {
     public static void main(String[] args) {
         // Instance of this class
         CarModel carModel = new CarModel();
-        CarView carView = new CarView(carModel);
         CarController carController = new CarController(carModel);
+        CarView carView = new CarView(carModel, carController);
 
         carModel.vehicles.add(new Volvo240());
         carModel.vehicles.add(new Scania(Color.red, 278, "Scania"));

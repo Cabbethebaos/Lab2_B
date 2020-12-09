@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.io.IOException;
 
 public abstract class Car extends Vehicle  {      // Abstrakt klass som implementerar interfacet movable
 
@@ -11,7 +12,7 @@ public abstract class Car extends Vehicle  {      // Abstrakt klass som implemen
      * @param modelName
      * @param nrDoors
      */
-    public Car(Color color, int enginePower, String modelName, int nrDoors) {
+    public Car(Color color, int enginePower, String modelName, int nrDoors){
         super(color, enginePower, modelName);
         this.nrDoors = nrDoors;
     }
