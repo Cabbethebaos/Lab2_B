@@ -14,6 +14,8 @@ public abstract class Vehicle implements Movable {
     private Point location; // location stored as a point
     private int offset = 0; // int thats holds offset variable
 
+    private BufferedImage image;
+
     private Direction dir;
 
     public Vehicle(Color color, int enginePower, String modelName) {
@@ -27,6 +29,21 @@ public abstract class Vehicle implements Movable {
         this.location = new Point(0, offset);
         offset += 100;
 
+        try {
+            this.image = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/" + getModelName() + ".jpg"));
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * returnerar bilden tillhörande objektet
+     * @return
+     */
+    public BufferedImage getImage() {
+        return image;
     }
 
     /**
@@ -56,7 +73,7 @@ public abstract class Vehicle implements Movable {
     }
 
     public Point setLocation(int x, int y){
-        return new Point(x,y);
+        return new Point(this.location);
     }
 
     /**

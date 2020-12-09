@@ -9,7 +9,7 @@ public class Main {
         saabalada.startEngine();
         saabalada.incrementSpeed(10);
         saabalada.move();
-        System.out.println(saabalada.getLocY());
+        System.out.println(saabalada.getLocation().y);
 
         saabalada.gas(0.2);
 
@@ -32,7 +32,7 @@ public class Main {
         lastare.setRampDown();
         lastare.loadCar(v240);
         lastare.unloadCar();
-        System.out.println(v240.getLocX() + ", " + v240.getLocY());
+        System.out.println(v240.getLocation().x + ", " + v240.getLocation().y);
 
         Workshop<Volvo240> volvo240Workshop = new Workshop<>(5);
         volvo240Workshop.addToWorkshop(v240);

@@ -32,8 +32,7 @@ public class Ferry extends Transport {
     public void unloadCar() {
         if (!getRampUp()) {
             Car temp = carsLoaded.get(0);
-            temp.setLocX(this.getLocX());
-            temp.setLocY(this.getLocY() + 1);
+            temp.setLocation(this.getLocation().x, (this.getLocation().y + 1));
             carsLoaded.remove(0);
         }
         else
