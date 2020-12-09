@@ -18,7 +18,7 @@ public class CarView extends JComponent{
     private static final int Y = 800;
 
     // The model member
-    CarModel c;
+    CarController c;
 
     CarModel m;
 
@@ -59,11 +59,10 @@ public class CarView extends JComponent{
 
     /**
      * Konstruktor som tar ett namn på frame'n och ett argument av typ CarController och initierar den.
-     * @param m
+     *
      */
-    public CarView(CarModel m, CarController c){
-        this.c = m;
-        this.m = m;
+    public CarView(CarController c){
+        this.c = c;
         this.drawPanel = new DrawPanel(X, Y-240, m);
         initComponents();
     }
