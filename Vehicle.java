@@ -55,8 +55,8 @@ public abstract class Vehicle implements Movable {
         this.location = new Point(newLocation);
     }
 
-    public Point setLocation(){
-        return new Point(this.location);
+    public Point setLocation(int x, int y){
+        return new Point(x,y);
     }
 
     /**
