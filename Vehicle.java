@@ -1,3 +1,4 @@
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -17,7 +18,7 @@ public abstract class Vehicle implements Movable {
 
     private Direction dir;
 
-    public Vehicle(Color color, int enginePower, String modelName) throws IOException {
+    public Vehicle(Color color, int enginePower, String modelName) {
         this.color = color;
         this.enginePower = enginePower;
         this.modelName = modelName;
@@ -71,7 +72,7 @@ public abstract class Vehicle implements Movable {
         this.location = new Point(newLocation);
     }
 
-    public Point setLocation(){
+    public Point setLocation(int x, int y){
         return new Point(this.location);
     }
 

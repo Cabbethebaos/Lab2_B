@@ -30,8 +30,7 @@ public class CarTransport extends Transport {
     public void unloadCar() {
         if (!getRampUp()) {
             Car temp = carsLoaded.get(carsLoaded.size() - 1);
-            temp.setLocX(this.getLocX());
-            temp.setLocY(this.getLocY() - 1);
+            temp.setLocation(this.getLocation().x, (this.getLocation().y - 1));
 
             carsLoaded.remove(carsLoaded.size() - 1);
         }
